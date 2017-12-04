@@ -19,8 +19,7 @@
     </div>
     <div class="container">
         <div class="col-md-4" ng-repeat="thingy in vm.photoArray">
-            <!-- <img ng-src='{{thingy.url}}'> -->
-            <!-- {{thingy.visible ? false : true}} -->
+
             <a href="#" ng-click="showDescription = ! showDescription">
                 <img ng-src='{{thingy.url}}'> </a>
             <div class="description" ng-show="showDescription">
@@ -30,20 +29,8 @@
             <button ng-click="count = count + 1" ng-init="count=0">Like</button>
             This has been liked {{count}} times!
 
-
-
-
-
-
-            <!-- <div ng-init="showButton=true"/>
-                      <div ng-show="showDescription">{{thingy.description}}</div>
-                      <button ng-Click="showDescription=true;showButton=!showButton" ng-show="showButton">Show</button>
-                      <button ng-Click="showDescription=false;showButton=!showButton" ng-show="!showButton">Hide</button>
-
-        </div> -->
-
         </div>
- 
+
 
 </body>
 
