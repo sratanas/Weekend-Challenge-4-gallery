@@ -1,9 +1,16 @@
+h1{
+    text-align: center;
+}
+
 #page-header{
     color: rgb(83, 134, 243);
     padding: 20px;
     height: 150px;
 }
 
+body{
+    background-color: rgb(255, 193, 138);
+}
 
 img {
     height:300px;
@@ -19,13 +26,22 @@ button {
     margin: 20px;
 }
 
-.col-md-5 {
-    height: 400px;
-    width: 400px;
-    background-color: green;
+.container-float {
+    height: 100px;
+    background-color: rgb(248, 47, 148);
     padding:10px;
+    margin: 20px;
+    letter-spacing: 4px;
 }
 
-.col-md-3{
-    margin:25px;
+.col-md-4{
+    margin-top:10px;
+
+}
+
+#yirgyDesc {
+    height: 300px;
+    width: 300px;
+    background-color: tomato;
+    color: white;
 }

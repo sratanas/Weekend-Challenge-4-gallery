@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="vendors/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="vendors/css/bootstrap.css" rel="stylesheet">
     <link href="styles/styles.css" rel="stylesheet">
     <script src="vendors/angular.js"></script>
     <script src="scripts/client.js"></script>
@@ -14,102 +14,36 @@
 
 <body ng-controller="GalleryController as vm">
 
-
-    <h1>Awesome image gallery</h1>
-
-    <div class="row">
-        <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-                <img src="images/yirgy_bw.jpg" alt="yirgy">
-                <button ng-click="count = count + 1" ng-init="count=0">
-                        Likes:
-                    </button>
-                    <span>
-                        count: {{count}}
-                    </span>
-            </a>
-
-        </div>
-        <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-                <img src="images/lake-superior.jpg" alt="yirgy">
-            </a>
-        </div>
-        <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-                <img src="images/kevin_winter_porch.jpg" alt="yirgy">
-            </a>
-        </div>
+    <div class="container-float">
+        <h1>ALL ABOUT STEPHANIE</h1>
     </div>
-    <div class="col-xs-6 col-md-3">
-        <a href="#" class="thumbnail">
-            <img src="images/sarah_adriatic.jpg" alt="yirgy">
-        </a>
-    </div>
-    <div class="row">
-        <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-                <img src="images/gooseberry.jpg" alt="yirgy">
-            </a>
-        </div>
-        <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-                <img src="images/gooseberry.jpg" alt="yirgy">
-            </a>
-        </div>
-    </div>
-    </div>
-
-    <!-- <div class="container">
-            <div class="row">
-                <div class="col-md-5">
-                    <img ng-src = "images/yirgy_bw.jpg">
-                    <button ng-click="count = count + 1" ng-init="count=0"> Likes:</button>
-                    <span>
-                        count: {{count}}
-                    </span>
-                </div>
-    
-            </div>
-        </div>
-
-        <div class="container">
-                <div class="row">
-                    <div class="col-md-5">
-                        <img ng-src = "/images/lake-superior.jpg">
-                        <button ng-click="count = count + 1" ng-init="count=0"> Likes:</button>
-                        <span>
-                            count: {{count}}
-                        </span>
-                    </div>
-        
-                </div>
+    <div class="container">
+        <div class="col-md-4" ng-repeat="thingy in vm.photoArray">
+            <!-- <img ng-src='{{thingy.url}}'> -->
+            <!-- {{thingy.visible ? false : true}} -->
+            <a href="#" ng-click="showDescription = ! showDescription">
+                <img ng-src='{{thingy.url}}'> </a>
+            <div class="description" ng-show="showDescription">
+                <p>{{thingy.description}}</p>
             </div>
 
+            <button ng-click="count = count + 1" ng-init="count=0">Like</button>
+            This has been liked {{count}} times!
 
 
-        <div id="lake2" img ng-src="images/yirgy_bw.jpg" ng-click="imgsrc='/images/lake-superior.jpg'">
-            <img ng-src="{{imgsrc}}" />
+
+
+
+
+            <!-- <div ng-init="showButton=true"/>
+                      <div ng-show="showDescription">{{thingy.description}}</div>
+                      <button ng-Click="showDescription=true;showButton=!showButton" ng-show="showButton">Show</button>
+                      <button ng-Click="showDescription=false;showButton=!showButton" ng-show="!showButton">Hide</button>
+
         </div> -->
 
-    <!-- want to use ng-repeat to bring bring things out in the objects because
-you don't want to make a new varible for every single photo. -->
-
-
-    <!-- <div id="lake" ng-init="imgsrc='/images/yirgy_bw.jpg'" ng-mouseover="imgsrc='/images/lake-superior.jpg'" ng-mouseout="imgsrc='/images/yirgy_bw.jpg'">
-        <img ng-src="{{imgsrc}}" />
-    </div>
-
-
-    <button ng-click="count = count + 1" ng-init="count=0">
-        Likes:
-    </button>
-    <span>
-        count: {{count}}
-    </span>
-    </div>
-    </div> -->
-
+        </div>
+ 
 
 </body>
 
